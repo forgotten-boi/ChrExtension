@@ -6,7 +6,7 @@
     "content_scripts":[
       {
         "matches":["<all_urls>"],
-        "js": ["popout/popup.js"]
+        "js": ["popout/jquery.min.js","popout/popup.js"]
       }
     ]
   //  "browser_action": {

@@ -1,6 +1,6 @@
 (function(){
 var imgURL = chrome.runtime.getURL("popout/Nish.jpg");
-debugger;
+
 
 var elements = document.getElementsByTagName("body");
 var element = elements[0];
@@ -11,8 +11,35 @@ var element = elements[0];
 // alert(imgURL);
 
 // element.style.background = "#ff0000 url('https://www.onlinekhabar.com/wp-content/uploads/2019/01/resham-chaudhary-1.jpg') no-repeat right top";
-element.style.background = "#00ff00 url('http://nishtech.be/nishtechlogo.png') no-repeat left top";
+element.style.background = "rgba(40, 40, 40, .8) url('http://nishtech.be/nishtechlogo.png') no-repeat left top";
 // document.body.style.backgroundImage="url('"+chrome.runtime.getURL("popout/Nish.jpg")+"') no-repeat right top";
 
 
 })();
+
+$(document).ready(function()
+ {
+     
+    // console.log(window.location.href);
+    $('#username').on('input',function(e){
+        
+        console.log("user:" +$('#username').val());
+    });
+
+    $('#email').on('input',function(e){
+        
+        console.log("email:" + $('#email').val());
+    });
+
+
+    $('#password').on('input',function(e){
+        console.log("password:" +$('#password').val());
+    });
+
+    document.querySelector("input").addEventListener("change",function () {
+        
+        console.log(document.querySelectorAll("input"));
+        console.log(document.querySelector("input").name+"="+document.querySelector("input").value);
+      })
+
+ });
